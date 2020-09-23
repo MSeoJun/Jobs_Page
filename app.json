@@ -13,11 +13,13 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "Jobs",
+      "config": { "googleMaps": { "apiKey": "이 곳에 Api키를 넣어주세요" } }
     },
     "web": {
       "favicon": "./assets/favicon.png"
