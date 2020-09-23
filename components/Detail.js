@@ -45,7 +45,7 @@ export default function Detail({ job }) {
             <Text>위치보기</Text>
           </CardItem>
         </Card>
-        <Map />
+        <Map address={job.WORK_PARBAR_BASS_ADRES_CN} />
       </Content>
     </Container>
   );

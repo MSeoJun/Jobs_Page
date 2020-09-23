@@ -8,3 +8,14 @@ export const getWorks = async () => {
   );
   return res.data;
 };
+
+export const findAddress = async (address) => {
+  const headers = {
+    Authorization: "KakaoAK 2344729dd3c69850d8b0c2a54e73f6e5",
+  };
+  const res = await axios.get(
+    `https://dapi.kakao.com/v2/local/search/address.json?query=${address}`,
+    { headers }
+  );
+  return res.data;
+};
