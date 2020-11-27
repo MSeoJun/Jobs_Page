@@ -3,6 +3,7 @@ import { Text, View } from "react-native";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
 import Routes from "./Routes";
+import Jobs from "./pages/Jobs";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,7 +24,8 @@ export default function App() {
   if (!isLoading) {
     return (
       <View>
-        <Routes />
+        {/* <Routes /> */}
+        <Jobs />
       </View>
     );
   } else {

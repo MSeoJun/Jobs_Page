@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { StyleSheet } from "react-native";
 import Map from "./Map";
 import {
@@ -45,7 +45,7 @@ export default function Detail({ job }) {
             <Text>위치보기</Text>
           </CardItem>
         </Card>
-        <Map address={job.WORK_PARBAR_BASS_ADRES_CN} />
+        <Map address={job.MNGR_INSTT_NM} />
       </Content>
     </Container>
   );

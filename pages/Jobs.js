@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import * as API from "../Api/Works";
 import Items from "../components/Items";
 import { Container, Header, Content, List, Body, Title } from "native-base";
+
 export default function Jobs() {
-  const [jobs, setJobs] = useState([]);
+  const [jobList, setjobList] = useState([]);
 
   useEffect(() => {
     const getList = async () => {
       const res = await API.getWorks();
-      setJobs(res.GetJobInfo.row);
+      setjobList(res.GetJobInfo.row);
     };
     getList();
   }, []);
@@ -22,9 +23,9 @@ export default function Jobs() {
       </Header>
       <Content>
         <List
-          dataArray={jobs}
+          dataArray={jobList}
           renderRow={(job) => {
-            return <Items job={job} />;
+            return <Items key={job.JO_REGIST_NO} job={job} />;
           }}
         />
       </Content>
